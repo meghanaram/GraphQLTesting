@@ -8,11 +8,11 @@ const resolvers = require("./resolvers");
 const { startDatabase } = require("./database");
 const expressPlayground = require("graphql-playground-middleware-express")
   .default;
+
  
 // Create a context for holding contextual data (db info in this case)
 const context = async() => {
-  const db = await startDatabase();
- 
+  const db = await startDatabase(); 
   return { db };
 };
  
